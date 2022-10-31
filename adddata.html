@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 130px;
+      }
+      /*was 80px now 100px*/
+      input,
+      select {
+        width: 120px;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Navigation Bar. Guide followed from: https://www.youtube.com/watch?v=gQgqJG8ld7M-->
+    <div class="nav-container">
+      <nav class="navbar">
+        <h1 id="navbar-logo">Solar CIS</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-links">Home</a></li>
+          <li><a href="rawdata.html" class="nav-links">Raw Data</a></li>
+          <li>
+            <a href="simpifieddata.html" class="nav-links">Processed Data</a>
+          </li>
+          <li><a href="mission.html" class="nav-links">Our Mission</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div style="width: 20%; margin: 0 auto">
+      <!--      FIELDS FOR ADMIN-->
+      <h1>EDIT DATASET</h1>
+      <label>Admin Key</label> <input id="Adminbox" type="text" /> <br /><br />
+      <label id="KWtext">KW Data</label> <input id="KWbox" type="text" />
+      <br /><br />
+      <label id="KWHtext">KWH Data</label> <input id="KWHbox" type="text" />
+      <br /><br />
+      <label id="Raintext">Rain Data</label> <input id="Rainbox" type="text" />
+      <br /><br />
+      <label id="Windtext">Wind Data</label> <input id="Windbox" type="text" />
+      <br /><br />
+      <label>Action Type</label>
+      <select id="Actionbox">
+        <option value="Add">Add</option>
+        <option value="Edit">Edit</option></select
+      ><br /><br />
+
+      <label id="Numbertext" style="color: black">Data Number</label>
+      <input id="Numberbox" /><br /><br />
+      <label id="Typetext" style="color: black">Data Type</label>
+      <select id="Typebox">
+        <option value="AllDatabox">All</option>
+        <option value="KWHDatabox">KWHData</option>
+        <option value="KWDatabox">KWData</option>
+        <option value="WindDatabox">WindData</option>
+        <option value="RainDatabox">RainData</option>
+      </select>
+      <br /><br />
+    </div>
+    <!--BUTTON TO SUBMIT CHANGES-->
+    <div style="width: 10%; margin: 0 auto">
+      <button id="Insbtn">UPDATE DATA</button>
+    </div>
+
+    <!--LINK TO JS SCRIPT-->
+    <script type="module" src="adddatascript.js"></script>
+  </body>
+</html>

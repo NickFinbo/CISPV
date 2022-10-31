@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Solar CIS</title>
+  </head>
+  <body>
+    <!--Navigation Bar. Guide followed from: https://www.youtube.com/watch?v=gQgqJG8ld7M-->
+    <div class="nav-container">
+      <nav class="navbar">
+        <h1 id="navbar-logo">Solar CIS</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-links">Home</a></li>
+          <li><a href="rawdata.html" class="nav-links">Raw Data</a></li>
+          <li><a href="mission.html" class="nav-links">Our Mission</a></li>
+          <li><a href="adddata.html" class="nav-links">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--IMPORTING ARRAY TO CSV ALGORITHM-->
+    <script src="arraytocsv.js"></script>
+    <!--IMPORTING ALORITHM THAT MODIFIES RAW DATA-->
+    <script type="module" src="simplifieddatascript.js"></script>
+    <h1 style="text-align: center; font-size: 70px">MODIFIED DATA</h1>
+    <!--CHARTING DATA USING CANVAS ELEMENT-->
+    <div class="chart-wrapper">
+      <canvas id="chart1"></canvas>
+      <button
+        onclick="download_csv_file(carbonArray)"
+        style="background-color: red; color: white; padding: 6px 16px"
+      >
+        Download CSV
+      </button>
+      <canvas id="chart2"></canvas>
+      <button
+        onclick="download_csv_file(phoneArray)"
+        style="background-color: red; color: white; padding: 6px 16px"
+      >
+        Download CSV
+      </button>
+      <canvas id="chart3"></canvas>
+      <button
+        onclick="download_csv_file(lightArray)"
+        style="background-color: red; color: white; padding: 6px 16px"
+      >
+        Download CSV
+      </button>
+    </div>
+  </body>
+</html>
